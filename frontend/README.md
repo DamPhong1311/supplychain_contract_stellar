@@ -1,118 +1,129 @@
-Supply Chain - Frontend
-📋 Giới thiệu
-Supply Chain là một ứng dụng web quản lý chuỗi cung ứng được xây dựng trên nền tảng Stellar. Ứng dụng cho phép người dùng tạo và quản lý sản phẩm trong chuỗi cung ứng thông qua giao diện trực quan.
+🌐 Supply Chain – Frontend
 
-✨ Tính năng chính
-🔗 Quản lý Hợp đồng Thông minh: Kết nối và tương tác với hợp đồng thông minh trên Stellar
+Members:
 
-📦 Tạo Sản phẩm: Đăng ký sản phẩm mới vào hệ thống chuỗi cung ứng
+Đàm Quang Phong – Phenikaa University – 22010466
 
-🔍 Tra cứu Thông tin: Xem thông tin chi tiết của sản phẩm
+Lý Thành Đạt – Phenikaa University – 23010879
 
-🔄 Cập nhật Trạng thái: Theo dõi và cập nhật trạng thái sản phẩm trong suốt vòng đời
+📋 Introduction
 
-💻 Giao diện Terminal: Hiển thị kết quả thực thi dưới dạng terminal trực quan
+Supply Chain is a web-based supply chain management application built on the Stellar blockchain platform.
+It allows users to create, manage, and track products through a clean and interactive web interface that connects directly with the deployed smart contract on Stellar.
 
-🛠 Công nghệ sử dụng
+✨ Key Features
+Feature	Description
+🔗 Smart Contract Integration	Connects and interacts directly with the deployed Stellar smart contract.
+📦 Product Creation	Register and store new products on the blockchain-based supply chain system.
+🔍 Product Lookup	Retrieve and display detailed product information.
+🔄 Status Update	Track and update product statuses throughout their lifecycle.
+💻 Terminal UI	Displays transaction and query results in a simulated terminal interface.
+🛠️ Technologies Used
+
 Frontend: HTML5, CSS3, JavaScript (ES6+)
 
 Icons: Font Awesome 6.4.0
 
 Styling: CSS Variables, Flexbox, Grid Layout
 
-Blockchain: Stellar Smart Contracts
+Blockchain Integration: Stellar Smart Contracts
 
-📁 Cấu trúc Project
-text
+📁 Project Structure
 supply-chain-dapp/
 │
-├── index.html          # File HTML chính
-├── style.css           # Stylesheet chính
-├── app.js              # JavaScript logic
-└── README.md           # Tài liệu hướng dẫn
-🚀 Cài đặt và Chạy ứng dụng
-Cách 1: Mở trực tiếp
-bash
-# Mở file index.html trực tiếp trong trình duyệt
+├── index.html          # Main HTML file
+├── style.css           # Main stylesheet
+├── app.js              # Core JavaScript logic
+└── README.md           # Project documentation
+
+🚀 Setup & Run Instructions
+Option 1: Open directly
+
+Simply open the file in your browser:
+
 open index.html
-Cách 2: Sử dụng Live Server (Khuyến nghị)
-bash
-# Cài đặt live-server globally
+
+Option 2: Using Live Server (Recommended)
+# Install Live Server globally
 npm install -g live-server
 
-# Chạy ứng dụng
+# Run the application
 live-server
-Cách 3: Sử dụng Python HTTP Server
-bash
+
+Option 3: Using Python HTTP Server
 # Python 3
 python -m http.server 8000
 
 # Python 2
 python -m SimpleHTTPServer 8000
-Truy cập: http://localhost:8000
 
-🎮 Hướng dẫn sử dụng
-1. Thiết lập ban đầu
-Ứng dụng đã được cấu hình sẵn với Contract ID mẫu
 
-Không cần kết nối ví, có thể sử dụng ngay ở chế độ local
+Then visit: http://localhost:8000
 
-2. Tạo sản phẩm mới
-Nhập Mã sản phẩm (Product ID)
+🎮 How to Use
+1️⃣ Initial Setup
 
-Nhập Tên sản phẩm (Product Name)
+The app is preconfigured with a sample Contract ID.
 
-Nhấn nút "Tạo Sản phẩm"
+No wallet connection is required; it runs locally by default.
 
-Kết quả sẽ hiển thị trong terminal
+2️⃣ Create a New Product
 
-3. Xem thông tin sản phẩm
-Nhập Mã sản phẩm cần tra cứu
+Enter Product ID
 
-Nhấn nút "Lấy Thông tin"
+Enter Product Name
 
-Thông tin chi tiết sẽ hiển thị trong terminal
+Click "Create Product"
 
-4. Cập nhật trạng thái sản phẩm
-Nhập Mã sản phẩm
+The execution result will appear in the terminal panel.
 
-Chọn Trạng thái mới từ dropdown
+3️⃣ Retrieve Product Information
 
-Nhấn nút "Cập nhật Trạng thái"
+Enter the Product ID
 
-Kết quả cập nhật sẽ hiển thị trong terminal
+Click "Get Product Info"
 
-🎨 Giao diện
-Màu sắc chủ đạo
-Primary: #2c3e50 (Xanh đậm)
+Product details will be displayed in the terminal.
 
-Secondary: #3498db (Xanh dương)
+4️⃣ Update Product Status
 
-Accent: #1abc9c (Xanh ngọc)
+Enter the Product ID
 
-Success: #2ecc71 (Xanh lá)
+Select a new status from the dropdown list
 
-Warning: #f39c12 (Cam)
+Click "Update Status"
 
-Danger: #e74c3c (Đỏ)
+The update confirmation appears in the terminal.
 
-Terminal Theme
-Nền: #1e1e1e (Đen)
+🎨 UI Design
+🎨 Color Palette
+Purpose	Color	Description
+Primary	#2c3e50	Deep blue
+Secondary	#3498db	Bright blue
+Accent	#1abc9c	Aqua green
+Success	#2ecc71	Green
+Warning	#f39c12	Orange
+Danger	#e74c3c	Red
+🖥️ Terminal Theme
+Element	Color
+Background	#1e1e1e (Black)
+Text	#00ff00 (Bright green)
+Output Result	#00ffff (Cyan)
+🔧 Configuration
+Change Contract ID
 
-Text: #00ff00 (Xanh lá sáng)
+Open app.js and locate:
 
-Kết quả: #00ffff (Xanh cyan)
-
-🔧 Tùy chỉnh
-Thay đổi Contract ID
-Mở file app.js và tìm dòng:
-
-javascript
 const contractId = 'CDIUC5W5773TEXZMU2QIGIUHMIYY6QB4UKGKIWPSOFVEEMIRFZID2NDT';
-Thay bằng Contract ID của bạn.
 
-Thay đổi địa chỉ ví mặc định
-Tìm và sửa dòng trong app.js:
 
-javascript
-const manufacturerAddress = 'GCEN2T267FH7GLL5VF4ELDY4LE7GWWQJDCN6RUPX2RLEASBJFQPN34C6'
+Replace it with your deployed Contract ID.
+
+Change Default Wallet Address
+
+In app.js, update the following line:
+
+const manufacturerAddress = 'GCEN2T267FH7GLL5VF4ELDY4LE7GWWQJDCN6RUPX2RLEASBJFQPN34C6';
+
+
+Replace it with your own Stellar wallet address.
