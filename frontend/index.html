@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain DApp - Local CLI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1><i class="fas fa-link"></i> Supply Chain DApp - Local CLI</h1>
+                <div class="local-mode">
+                    <i class="fas fa-terminal"></i>
+                    <span>Local Execution Mode</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="contract-section">
+            <h2><i class="fas fa-file-contract"></i> Thông tin Hợp đồng</h2>
+            <p>Contract ID:</p>
+            <div class="contract-id">CDIUC5W5773TEXZMU2QIGIUHMIYY6QB4UKGKIWPSOFVEEMIRFZID2NDT</div>
+            <p class="saved-notice">
+                <i class="fas fa-check-circle"></i> Contract ID đã được cấu hình
+            </p>
+        </section>
+
+        <section class="contract-section">
+            <h2><i class="fas fa-boxes"></i> Quản lý Sản phẩm</h2>
+            
+            <div class="product-management">
+                <div class="product-card">
+                    <h3><i class="fas fa-plus-circle"></i> Tạo Sản phẩm Mới</h3>
+                    <div class="form-group">
+                        <label for="productId">Mã Sản phẩm</label>
+                        <input type="text" id="productId" placeholder="Nhập mã sản phẩm (ví dụ: 1)">
+                    </div>
+                    <div class="form-group">
+                        <label for="productName">Tên Sản phẩm</label>
+                        <input type="text" id="productName" placeholder="Nhập tên sản phẩm (ví dụ: iPhone 15)">
+                    </div>
+                    <button class="btn" id="createProduct">
+                        <i class="fas fa-plus"></i> Tạo Sản phẩm
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <h3><i class="fas fa-info-circle"></i> Thông tin Sản phẩm</h3>
+                    <div class="form-group">
+                        <label for="infoProductId">Mã Sản phẩm</label>
+                        <input type="text" id="infoProductId" placeholder="Nhập mã sản phẩm">
+                    </div>
+                    <button class="btn btn-secondary" id="getInfo">
+                        <i class="fas fa-search"></i> Lấy Thông tin
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <h3><i class="fas fa-exchange-alt"></i> Cập nhật Trạng thái</h3>
+                    <div class="form-group">
+                        <label for="statusProductId">Mã Sản phẩm</label>
+                        <input type="text" id="statusProductId" placeholder="Nhập mã sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <label for="statusSelect">Trạng thái Mới</label>
+                        <select id="statusSelect">
+                            <option value="created">Created</option>
+                            <option value="manufactured">Manufactured</option>
+                            <option value="shipped">Shipped</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="sold">Sold</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-warning" id="updateStatus">
+                        <i class="fas fa-sync-alt"></i> Cập nhật Trạng thái
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contract-section">
+            <h2><i class="fas fa-terminal"></i> Kết quả Thực thi</h2>
+            <button class="clear-btn" id="clearTerminal">
+                <i class="fas fa-broom"></i> Xóa Kết quả
+            </button>
+            <div class="terminal" id="terminal">
+                <div class="terminal-line terminal-prompt">SupplyChainDApp > Kết nối thành công với hợp đồng</div>
+                <div class="terminal-line terminal-prompt">SupplyChainDApp > Sẵn sàng nhận lệnh...</div>
+                <div id="commandHistory" class="command-history"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Supply Chain DApp - Local CLI Mode &copy; 2023 - Mô phỏng lệnh PowerShell Stellar</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
